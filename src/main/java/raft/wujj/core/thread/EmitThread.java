@@ -22,11 +22,11 @@ public class EmitThread extends Thread{
 	
 	public void run() {
 		
-		while(true) {
+		//while(true) {
 			//state ==0 时候, emmit event to others.
 			if(state.getState() == 0) {
 				try {
-					int randomTime = cirleTime+((int)Math.random()*cirleTime);
+					int randomTime = cirleTime+((int)(Math.random()*cirleTime));
 					Thread.sleep(randomTime);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
@@ -39,13 +39,15 @@ public class EmitThread extends Thread{
 						public void run() {
 							UrlThreadLocal.stashUrl(one);
 							OrderClient client = ApplicationContextHolder.getApplicationContext().getBean(OrderClient.class);
+							String result = client.getBaiDuIndex(null);
+							System.out.println(Thread.currentThread() + "  "+one+ " " +result);
 						}
 					}
 				).start();
 				
 			}
 		}//state.getState() == 0
-	}//end_of_while
+	//}//end_of_while
 	
 
   }

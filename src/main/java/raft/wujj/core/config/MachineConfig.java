@@ -1,11 +1,16 @@
 package raft.wujj.core.config;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MachineConfig {
 	
-    private static String selfHost;
-    private static List<String> otherHost;
+    private static String selfHost = "http://127.0.0.1:8080";
+    private static List<String> otherHost = new ArrayList<String>();
+    static {
+    	otherHost.add("http://www.baidu.com");
+    	otherHost.add("http://www.suizhou.gov.cn");
+    }
 	public static String getSelfHost() {
 		return selfHost;
 	}
