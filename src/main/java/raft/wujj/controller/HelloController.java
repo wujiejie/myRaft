@@ -6,8 +6,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
-
-import raft.wujj.client.OrderClient;
 import raft.wujj.config.AllPropertiesConfig;
 import raft.wujj.controller.input.HelloControllerVO;
 
@@ -19,8 +17,7 @@ public class HelloController {
 	@Autowired
 	private AllPropertiesConfig allPropertiesConfig;
 	
-	@Autowired
-	private OrderClient client;
+
 	
 	@RequestMapping(value="/hello",method=RequestMethod.GET,produces="application/json;charset=UTF-8")
 	@ResponseBody
@@ -33,7 +30,8 @@ public class HelloController {
 	@RequestMapping(value="/baidu",method=RequestMethod.GET,produces="application/json;charset=UTF-8")
 	@ResponseBody
 	public String getBaiDuIndex() {		
-		return client.getBaiDuIndex(null);
+		
+		return null;
 	}
 
 }
