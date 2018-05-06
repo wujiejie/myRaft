@@ -4,10 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import raft.wujj.core.event.CustomEvent;
+import raft.wujj.core.event.ExchangeEvent;
 
 public class NotePad {
 	
-	public static  List<CustomEvent> list = new ArrayList<CustomEvent>();
+	public static  List<ExchangeEvent> list = new ArrayList<ExchangeEvent>();
 		
 
 }

@@ -82,7 +82,7 @@ public class HttpUtil {
         return post(url, timeout, timeout, data, encoding);
     }
     
-    public static String post(String url, String body, String encoding, int connectTimeout, int readTimeout) throws IOException{
+    public static String post(String url, String body) throws IOException{
     	return postBody(url,body,"UTF-8",CONNECTION_TIMEOUT,READ_DATA_TIMEOUT);
     }
     /**
