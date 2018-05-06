@@ -31,7 +31,7 @@ public class EmitThread extends Thread{
 		
 		while(true) {
 			//state == FOLLOWER , emmit event to others.
-		    //reload from file.
+		    //reload from file, mybe the database
 		  total.set(0);
 		  NodeState.incrementMySeq();
 			if(state.getState() == NodeState.FOLLOWER) {
